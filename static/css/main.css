@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Color Scheme https://coolors.co/edffec-61e786-5a5766-48435c-9792e3 */
+body {
+  height: 100%;
+  margin: 0;
+
+  overflow-x: hidden;
+
+  font-family: sans-serif;
+  background-color: #5A5766;
+  color: #EDFFEC;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* text */
+
+p {
+  margin: 10px;
+}
+
+/* internal container for collisions */
+#contentContainer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
+/* content dividers */
+
+.content-container {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-row {
+    width: auto;
+}
+
+/* specifically for small page */
+.content-item-small {
+  background-color: #48435C;
+  padding: 5px;
+  width: 350px;
+  margin: 5px;
+
+  line-height: 20px;
+  text-align: center;
+  
+  border-radius: 25px;
+  border: 4px solid #534e66;
+}
+
+.content-item {
+  background-color: #48435C;
+  padding: 5px;
+  width: 550px;
+  margin: 10px;
+
+  line-height: 20px;
+  text-align: left;
+  
+  border-radius: 25px;
+  border: 4px solid #534e66;
+}
+
+
+/* links */
+
+a:link {
+    color: #61E786;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #78be8c;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #9792E3;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: #61E786;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+/* buttons */
+
+.button {
+  background-color: #5A5766;
+  color: #EDFFEC;
+  padding: 16px 32px;
+  margin: 4px 2px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  border-radius: 15px;
+  border: 2px solid #534e66;
+}
+
+.button-alt {
+  background-color: #4c485f;
+}
+
+.button:hover {
+  background-color: #61E786;
+  color: #EDFFEC;
+}
+
+#logoutButton {
+  background-color: #00000000;
+  color: #EDFFEC;
+  margin: 4px 2px;
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+/* course progress */
+
+.chapter-progress {
+  display: static;
+  padding-left: 5%;
+  margin: 4px 2px;
+  width: 100%;
+  color: #EDFFEC;
+
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+.chapter-progress-text {
+  text-align: left;
+  padding: 0;
+  width: 90%;
+}
+
+.completion-icon {
+  width: 10%;
+}
+
+/* recolouring for if the individual assignments are done */
+.incomplete {
+  background-color: #884343;
+  border: 2px solid #722929;
+}
+
+.complete {
+  background-color: #65af5e;
+  border: 2px solid #32632c;
+}
+
+
+/* forms */
+
+input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 100%;
+  background-color: #5A5766;
+  color: #EDFFEC;
+  border: 2px solid #534e66;
+
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+
+/* login password validator */
+
+#passValContainer {
+  background-color: #a75858;
+  color: #EDFFEC;
+
+  font-size: .85rem;
+  text-align: left;
+
+  border: 2px solid #534e66;
+  border-radius: 10px;
+}
+
+
+/* quiz forms */
+
+.quiz-form {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.quiz-question {
+  background-color: #48435C;
+  padding: 5px;
+  width: 400px;
+  margin: 5px;
+
+  line-height: 20px;
+  text-align: left;
+  
+  border-radius: 25px;
+  border: 4px solid #534e66;
+}
+
+.quiz-question-option {
+  font-size: 1.05em;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.quiz-question-option p {
+  margin: 7px;
+}
+
+/* fix for radio buttons */
+input[type=radio] {
+  align-self: center;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+}
+
+.quiz-button {
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* flashing */
+
+.flash-base {
+  width: vw;
+  text-align: center;
+  padding: 5px;
+}
+
+/* types of errors */
+.error {
+  background-color: rgba(202, 35, 35, 0.966);
+}
+
+
+/* passed/failed screens */
+#test-completion {
+  background-color: #48435C;
+  padding: 5px;
+  width: 350px;
+  margin: 5px;
+
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 25px;
+  border: 4px solid #534e66;
+}
+
+/* misc */
+
+h3 {
+  margin: 8px;
+}
+
+#header {
+  position: fixed;
+  width:100%;
+  top: 0px;
+
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+}
+
+/* tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  /* bold for visibility */
+  font-weight: bold;
+
+  /* border for visibility */
+  border-bottom: 1px dotted #EDFFEC;
+}
+
+.tooltip .text {
+  background-color: #373347;
+  color: #EDFFEC;
+  width: 200px;
+  display: flex;
+  align-self: center;
+
+  z-index: 1;
+
+  font-weight: normal;
+
+  visibility: hidden;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+
+  border-radius: 5px;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
+}
+
+
+/* resizing */
+
+@media only screen and (max-width: 700px) {
+  .content-item {
+    width: 340px;
+  }
+  .content-item-small {
+    width: 340px;
+  }
+  .quiz-question {
+    width: 340px;
+  }
+
+  /* to prevent offscreen clipping of tooltips */
+  .tooltip .text {
+    width: fit-content;
+    z-index: 99;
+  }
+
+  /* turn logout button into fixed footer */
+  #header {
+    overflow:hidden;
+    position: sticky;
+    height: auto;
+    top: 0px;
+
+    /* to avoid clipping with the tooltips */
+    z-index: 1;
+
+    justify-content: center;
+  }
+
+  #logoutButton {
+    background-color: #48435C;
+    width:350px;
+    padding: 0px;
+  
+    border-radius: 25px;
+    border: 4px solid #534e66;
+
+    position: sticky;
+    color: #EDFFEC;
+  }
+}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SecureMe - Information Text</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <h2>Information Security</h2>
+    </div>
+
+    <div class="content-item">
+        <p>	Your personal information is something that is very important, and is also something that can be 
+            easily <span class="tooltip">compromised<span class="text">When information is accessed by those who 
+            shouldn't have access to it.</span></span> on the internet. Not everyone is out to be your friend, including companies, and 
+            a lot of people are seeking your personal information. Keep this safe can be both simple and 
+            complicated in certain regards, but this article will help you through the basics.</p>
+    </div>
+
+    <div class="content-item">
+        <p>	The most important factor when it comes to one's information security is keeping it safe from other people you 
+            interact with online. Anything from your name to your banking information is all information that could lead to 
+            potential security issues. Think of it this way: all of your information can in one way or another be used against you: 
+            names in spam emails, emails in <span class="tooltip">email dumps<span class="text">A large list of emails gained from a 
+            breach/leak, usually to be sold to spammers/companies.</span></span>, bank account info in regards to your bank account 
+            being breached, etc.. Everything can and could potentially be used maliciously.</p>
+    </div>
+
+    <div class="content-item">
+        <p>	This part of your information security is actually really easy to protect yourself towards; simply don’t 
+            share any information. You might think that this is really obvious, but a lot of people do it. Sharing pictures 
+            even as <span class="tooltip">inconspicuous<span class="text">Something that fits in, being so generic that it's easy to miss.
+            </span></span> as boarding passes on social media for example can expose a lot of personal information. Now, 
+            the easy thing to say is just to not use any platforms where one could share any of this accidently, but those 
+            platforms are also often really fun to use. Because of this, trying your best not to share anything personal, 
+            even your face, is generally a great idea. As technology progresses, things even as general like our voices can 
+            be <span class="tooltip">deepfaked<span class="text">Using software, usually with AI (artificial intelligence), to 
+            replicate someone's voice.</span></span> and used to access bank accounts.</p>
+    </div>
+
+    <div class="content-item">
+        <p>	Believe it or not, companies are also out for your information. Have you ever talked with your friends about a product, 
+            and sooner or later you start getting online advertisements for it? That’s right, they’re in the walls. In all actuality, 
+            our devices are listening to us, and so our the websites we visit. Although it’s hard to protect yourself from all forms 
+            of snooping, you can reasonably take certain measures. When websites ask you if they can get access to certain data the 
+            first time you visit, it’s in your best practice to always deny them. <span class="tooltip">Personal data removal services
+            <span class="text">Software/companies that remove your personal information from companies on the internet.
+            </span></span> are good for handling companies that you already gave the permission to take your info, and 
+            it’s highly recommended to look into those. You can also do this manually, but it can be a long and difficult process.</p>
+    </div>
+
+    <div class="content-item">
+        <p>	Lastly, even though it doesn’t directly fall into information security, maintaining your <span class="tooltip">digital footprint
+            <span class="text">Software/companies that remove your personal information from companies on the internet.</span></span> is also 
+            something that is very important. Everything you say online can be traced back to you easily, and potential employers and 
+            schools look at this. Be careful on what you put online, because it will be viewed, and could be used against you if it’s 
+            something bad. Careers have been lost over this. Generally, one should be respectful on the internet, but it is especially 
+            important for this reason.</p>
+    </div>
+
+    <div class="content-item-small">
+        <h2>🎉 Congrats 🎉</h2>
+        <p>You have finished this chapters content! Continue below to take the quiz.</p>
+        <a href="{{ url_for('informationQuiz') }}">
+            <button type="button" class="button">
+                Start Quiz
+            </button>
+        </a>
+    </div>
+
+    <!-- footer -->
+    <div class="content-item-small">
+        <p>If you would like to contact the creator of this site, do so at <i>jhaas0953@gmail.com</i>.</p>
+    </div>
+</div>
+{% endblock %}

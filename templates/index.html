@@ -1,0 +1,31 @@
+{% extends 'base-no_logout.html' %}
+
+{% block head %}
+<title>SecureMe</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Logo of SecureMe" width="350" height="175">
+        <p>SecureMe is a short and free educational course for people new on the internet and computers, designed to teach and encourage proper safety measures in the context of interacting with the online world.</p>
+        <p>Upon completion of the SecureMe course, one will get a certification to showcase their new knowledge in regards to internet and computer safety.</p>
+        
+        <a href="{{ url_for('login') }}">
+            <button type="button" class="button">
+                Login
+            </button>
+        </a>
+        
+        <a href="{{ url_for('register') }}">
+            <button type="button" class="button">
+                Register
+            </button>
+        </a>
+    </div>
+    <!-- footer -->
+    <div class="content-item-small">
+        <p>If you would like to contact the creator of this site, do so at <i>jhaas0953@gmail.com</i>.</p>
+    </div>
+</div>
+{% endblock %}

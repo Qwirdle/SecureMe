@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicons/favicon.ico') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="header">
+        <!-- use span to allow justify content to push login to right-->
+        <span></span>
+        <a href="{{ url_for('logout') }}">
+            <button id="logoutButton" style="font-size: 1.4rem;">
+                <img src="{{ url_for('static', filename='assets/images/logout.svg') }}" alt="Logo of SecureMe" width="22" height="22">
+                <p>Logout</p>
+            </button>
+        </a>
+    </div>
+
+    <div id="contentContainer">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <!-- span to avoid weird div props -->
+              <span>
+              {% for category, message in messages %}
+                <div class="flash-base {{ category }}">{{ message }}</div>
+              {% endfor %}
+              </span>
+            {% endif %}
+        {%  endwith %}
+        {% block body %}{% endblock %}
+    </div>  
+</body>
+{% endautoescape %}
+</html>

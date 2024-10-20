@@ -1,0 +1,323 @@
+{% extends 'base-no_logout.html' %}
+
+{% block head %}
+<title>SecureMe - Final Test</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <h2>Final Test</h2>
+    </div>
+
+    <form class="quiz-form" action="#" method="post" autocomplete="off">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" /> 
+
+        <div class="quiz-question">
+            <p>Which of the following is a good way to avoid malware?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="a">
+                <p>Download files from random websites</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="b">
+                <p>Be careful with files you download from places that you might not trust</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="c">
+                <p>Use unsafe sites</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="d">
+                <p>Ignore any antivirus warnings</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>What operating system is most popular for malware attacks?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="a">
+                <p>Linux</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="b">
+                <p>macOS</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="c">
+                <p>Android</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="d">
+                <p>Windows</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Why should one try to use strong passwords?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="a">
+                <p>To make accounts easier to login to</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="b">
+                <p>To make them less hard to memorize</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="c">
+                <p>To protect your accounts</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="d">
+                <p>To make logging in more tedious</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following malware types use user interaction to spread onto systems?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="a">
+                <p>Viruses</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="b">
+                <p>Ransomware</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="c">
+                <p>Worms</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="d">
+                <p>Spyware</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Why should one not reuse passwords?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="a">
+                <p>Doing so makes passwords easier to login with</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="b">
+                <p>It can cause multiple accounts that share the same password to be hacked faster, if one account is already hacked</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="c">
+                <p>To assist with recovering one's account</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="d">
+                <p>Because it is general practice that everyone follows</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>What does two-factor authentication do?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="a">
+                <p>Help against email spam</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="b">
+                <p>Make it easier to login with passwords</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="c">
+                <p>Add an extra level of security to one's accounts</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="d">
+                <p>Make it easier to generate passwords</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Why should one try not to share pictures online?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="a">
+                <p>It can make your social media accounts more popular</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="b">
+                <p>It can potentially expose one's personal information</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="c">
+                <p>You actually should, it’s fun</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="d">
+                <p>It could help with improving the algorithms of social sites</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following types of malware spread through self-replication?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="a">
+                <p>Ransomware</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="b">
+                <p>Viruses</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="c">
+                <p>Worms</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="d">
+                <p>Spyware</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following passwords is the strongest?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question9" class="quiz-button" value="a">
+                <p>Password123</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question9" class="quiz-button" value="b">
+                <p>j[nU&P(m1#G0[5m</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question9" class="quiz-button" value="c">
+                <p>my@drowssap</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question9" class="quiz-button" value="d">
+                <p>01234</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>What does a password manager do?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question10" class="quiz-button" value="a">
+                <p>It helps with automatically creating passwords</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question10" class="quiz-button" value="b">
+                <p>It helps with hacking accounts</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question10" class="quiz-button" value="c">
+                <p>A type of software to make logging into one's computer easier</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question10" class="quiz-button" value="d">
+                <p>It automatically stores and types in one's passwords</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following is the best way to protect one's personal information on the internet?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question11" class="quiz-button" value="a">
+                <p>Share a lot of your life on social media</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question11" class="quiz-button" value="b">
+                <p>Trying not to share any personal information to the internet</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question11" class="quiz-button" value="c">
+                <p>Use similar passwords for each of your accounts</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question11" class="quiz-button" value="d">
+                <p>Click on all the ads you see on sites</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>What should one do when you get an email from a website you frequently use, asking for one's password information?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question12" class="quiz-button" value="a">
+                <p>Give the emailer your password</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question12" class="quiz-button" value="b">
+                <p>Ignore it, or maybe even report it</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question12" class="quiz-button" value="c">
+                <p>Fill it out, and forward it to a friend</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question12" class="quiz-button" value="d">
+                <p>Click on any links to make sure it’s actually the site</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following types of malware nearly always demands a form of payment?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question13" class="quiz-button" value="a">
+                <p>Trojan Horse</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question13" class="quiz-button" value="b">
+                <p>Spyware</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question13" class="quiz-button" value="c">
+                <p>Ransomware</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question13" class="quiz-button" value="d">
+                <p>Worm</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>In relation to malware, what is the definition of a backdoor?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question14" class="quiz-button" value="a">
+                <p>An exploit to get through/into a network or system</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question14" class="quiz-button" value="b">
+                <p>A hack in a video game</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question14" class="quiz-button" value="c">
+                <p>A way to mass-send spam emails</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question14" class="quiz-button" value="d">
+                <p>An antivirus security feature</p>
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>What is the idea behind antivirus software?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question15" class="quiz-button" value="a">
+                <p>To slow down your computer</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question15" class="quiz-button" value="b">
+                <p>To increase internet speeds</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question15" class="quiz-button" value="c">
+                <p>To protect against malware</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question15" class="quiz-button" value="d">
+                <p>To help with freeing up storage</p>
+            </label>
+        </div>
+
+        <div class="content-item-small">
+            <h2>Submit</h2>
+            <p>You have come to the end of the test! Continue below to see your score.</p>
+            <button type="submit" class="button">Submit Test</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

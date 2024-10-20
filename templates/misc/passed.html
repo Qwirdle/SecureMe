@@ -1,0 +1,19 @@
+{% extends 'base-no_logout.html' %}
+
+{% block head %}
+<title>SecureMe - Passed {{ test }}</title>
+{% endblock %}
+
+{% block body %}
+<div id="test-completion">
+    <h2>🎉 Congrats 🎉</h2>
+    <h3>You passed with a score of</h3>
+    <h1>{{ score }} %</h1>
+    <br>
+    <a href="{{ url_for('home') }}">
+        <button type="button" class="button">
+            Continue
+        </button>
+    </a>
+</div>
+{% endblock %}

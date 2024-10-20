@@ -1,0 +1,28 @@
+{% extends 'base-no_logout.html' %}
+<!-- https://www.youtube.com/watch?v=dam0GPOAvVI has stuff on authentication and message flasking also use https://www.geeksforgeeks.org/login-and-registration-project-using-flask-and-mysql/-->
+{% block head %}
+<title>SecureMe - Login</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <h2>Login</h2>
+        
+        <form action="#" method="post">
+            <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" />
+            <input type="text" id="username" name="username" placeholder="Username"><br>
+            <input type="password" id="password" name="password" placeholder="Password"><br>
+
+            <button type="submit" class="button">Login</button>
+        </form>
+        <br>
+        <a href="{{ url_for('register') }}">No account? <strong>Register Here</strong></a>
+
+    </div>
+    <!-- footer -->
+    <div class="content-item-small">
+        <p>If you would like to contact the creator of this site, do so at <i>jhaas0953@gmail.com</i>.</p>
+    </div>
+</div>
+{% endblock %}

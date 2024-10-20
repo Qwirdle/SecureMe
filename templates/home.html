@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SecureMe - Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <h3>Welcome back {{ current_user.username }}!</h3>
+    </div>
+
+    <!-- links to the individual courswork assignments -->
+    <div class="content-item-small">
+        <h3>Coursework</h3>
+        
+        <a href="{{ url_for('credentialText') }}">
+            {% if credPass %}
+            <button type="button" class="chapter-progress complete">
+                <div class="chapter-progress-text">
+                    <p>Credential Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-up.svg') }}" alt="Thumbs Up" width="20" height="20">
+                </div>
+            </button>
+            {% else %}
+            <button type="button" class="chapter-progress incomplete">
+                <div class="chapter-progress-text">
+                    <p>Credential Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-down.svg') }}" alt="Thumbs Down" width="20" height="20">
+                </div>
+            </button>
+            {% endif %}
+        </a>
+
+        <a href="{{ url_for('informationText') }}">
+            {% if infoPass %}
+            <button type="button" class="chapter-progress complete">
+                <div class="chapter-progress-text">
+                    <p>Information Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-up.svg') }}" alt="Thumbs Up" width="20" height="20">
+                </div>
+            </button>
+            {% else %}
+            <button type="button" class="chapter-progress incomplete">
+                <div class="chapter-progress-text">
+                    <p>Information Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-down.svg') }}" alt="Thumbs Down" width="20" height="20">
+                </div>
+            </button>
+            {% endif %}
+        </a>
+
+        <a href="{{ url_for('malwareText') }}">
+            {% if malPass %}
+            <button type="button" class="chapter-progress complete">
+                <div class="chapter-progress-text">
+                    <p>Malware Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-up.svg') }}" alt="Thumbs Up" width="20" height="20">
+                </div>
+            </button>
+            {% else %}
+            <button type="button" class="chapter-progress incomplete">
+                <div class="chapter-progress-text">
+                    <p>Malware Security</p>
+                </div>
+                <div class="completion-icon">
+                    <img src="{{ url_for('static', filename='assets/images/thumb-down.svg') }}" alt="Thumbs Down" width="20" height="20">
+                </div>
+            </button>
+            {% endif %}
+        </a>
+        
+        <a href="{{ url_for('finalTest') }}">
+            {% if credPass and infoPass and malPass %}
+                {% if finalPass %}
+                <button type="button" class="chapter-progress complete">
+                    <div class="chapter-progress-text">
+                        <p>Final Test</p>
+                    </div>
+                    <div class="completion-icon">
+                        <img src="{{ url_for('static', filename='assets/images/thumb-up.svg') }}" alt="Thumbs Up" width="20" height="20">
+                    </div>
+                </button>
+                {% else %}
+                <button type="button" class="chapter-progress incomplete">
+                    <div class="chapter-progress-text">
+                        <p>Final Test</p>
+                    </div>
+                    <div class="completion-icon">
+                        <img src="{{ url_for('static', filename='assets/images/thumb-down.svg') }}" alt="Thumbs Down" width="20" height="20">
+                    </div>
+                </button>
+                {% endif %}
+            {% endif %}
+        </a>
+
+        {% if finalPass %}
+        <a href="{{ url_for('certification') }}">
+            <button type="button" class="button">
+                Download Certificate
+            </button>
+        </a>
+        {% endif %}
+
+        <p>
+            The above buttons all link to one of the 3 chapters in this course. In order to complete the course, one must pass each chapter quiz.
+        </p>
+    </div>
+
+    <div class="content-item-small">
+        <h3>External Resources</h3>
+        <p><a href="{{ url_for('toolsApps') }}">Tools and Apps</a></p>
+        <p><a href="{{ url_for('podcastsMedia') }}">Podcasts and Media</a></p>
+        <p><a href="{{ url_for('education') }}">Educational Resources</a></p>
+    </div>
+    
+    <!-- footer -->
+    <div class="content-item-small">
+        <p>If you would like to contact the creator of this site, do so at <i>jhaas0953@gmail.com</i>.</p>
+    </div>
+</div>
+{% endblock %}

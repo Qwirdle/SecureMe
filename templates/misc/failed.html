@@ -1,0 +1,20 @@
+{% extends 'base-no_logout.html' %}
+
+{% block head %}
+<title>SecureMe - Failed {{ test }}</title>
+{% endblock %}
+
+{% block body %}
+<div id="test-completion">
+    <h2>😔 Oh No! 😔</h2>
+    <h3>You failed with a score of</h3>
+    <h1>{{ score }} %</h1>
+    <h3>Don't worry, you can try again!</h3>
+    <br>
+    <a href="{{ url_for('home') }}">
+        <button type="button" class="button">
+            Continue
+        </button>
+    </a>
+</div>
+{% endblock %}

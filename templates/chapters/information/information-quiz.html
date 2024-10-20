@@ -1,0 +1,196 @@
+{% extends 'base-no_logout.html' %}
+
+{% block head %}
+<title>SecureMe - Information Quiz</title>
+{% endblock %}
+
+{% block body %}
+<div class="content-container">
+    <div class="content-item-small">
+        <h2>Information Security Quiz</h2>
+    </div>
+
+    <form class="quiz-form" action="#" method="post" autocomplete="off">
+        <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" /> 
+
+        <div class="quiz-question">
+            <p>Which of the following is the most important factor when it comes to information security?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="a">
+                <p>Avoiding the use of e-commerce sites</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="b">
+                <p>Keeping your personal information secure from others on the internet</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="c">
+                <p>Giving all your personal information to your friends</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question1" class="quiz-button" value="d">
+                <p>Only use one password</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of the following could potentially create security issues?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="a">
+                <p>Sending random people your bank account information</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="b">
+                <p>Sharing ones name online</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="c">
+                <p>Sharing ones email address publicly online</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question2" class="quiz-button" value="d">
+                <p>All of the above</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>What is the simplest way to protect your personal information on the internet?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="a">
+                <p>Avoiding any distribution of ones personal information</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="b">
+                <p>Share as much information as possible</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="c">
+                <p>Completely avoid any use of social media</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question3" class="quiz-button" value="d">
+                <p>Change your name often</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>What’s an example of a piece of information that seems harmless but could actually help compromise your security?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="a">
+                <p>Your first name</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="b">
+                <p>Your childhood pet’s name</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="c">
+                <p>A picture of ones boarding pass</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question4" class="quiz-button" value="d">
+                <p>All of the above</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>How should one keep up their information privacy online?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="a">
+                <p>Share as much information as possible</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="b">
+                <p>Completely avoid any use of social media</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="c">
+                <p>Change your name often</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question5" class="quiz-button" value="d">
+                <p>Avoiding any distribution of ones personal information</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>What should one do when websites ask for your data?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="a">
+                <p>Deny any access</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="b">
+                <p>Give full permission</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="c">
+                <p>Provide all your banking information</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question6" class="quiz-button" value="d">
+                <p>Unplug your router</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>Why should one use personal data removal services?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="a">
+                <p>To remove advertisements</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="b">
+                <p>To remove unwanted files</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="c">
+                <p>To protect your computer against viruses</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question7" class="quiz-button" value="d">
+                <p>To remove information on you that companies have already collected</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="quiz-question">
+            <p>Why should you be concerned about your digital footprint?</p>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="a">
+                <p>To save space on ones computer</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="b">
+                <p>Because future schools/employers will look into it</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="c">
+                <p>To help with remembering ones login credentials</p>
+            </label>
+            <label class="quiz-question-option">
+                <input type="radio" name="question8" class="quiz-button" value="d">
+                <p>To help with stopping ones accounts from being breached</p>
+            </label>
+            <br>
+        </div>
+
+        <div class="content-item-small">
+            <h2>Submit</h2>
+            <p>You have come to the end of the quiz! Continue below to see your score.</p>
+            <button type="submit" class="button">Submit Quiz</button>
+        </div>
+    </form>
+
+    <!-- footer -->
+    <div class="content-item-small">
+        <p>If you would like to contact the creator of this site, do so at <i>jhaas0953@gmail.com</i>.</p>
+    </div>
+</div>
+{% endblock %}
