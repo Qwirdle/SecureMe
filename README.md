@@ -16,7 +16,7 @@ After installing these libs, _generate a secret key_, run the app.py file, and e
 
 
 ### Compatible Operating Systems
-SecureMe was built and tested on Windows, and because of how file paths are handled in certain areas, at the moment SecureMe is only guaranteed to run without issues on Windows, so use other operating systems with some caution.
+SecureMe was built and tested on Windows, so at the moment SecureMe is only guaranteed to run without issues on Windows. Use other operating systems with some caution.
 
 
 ### Extra
