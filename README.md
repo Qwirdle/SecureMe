@@ -1,5 +1,5 @@
 ### SecureMe
-**SecureMe** is my entry into the 2024 Congressional App Challenge
+**SecureMe** is my entry into the 2024 Congressional App Challenge.
 It's a short online course site built on flask and the standard frontend languages (HTML, CSS, Javascript.) The database runs off of sqlite.
 
 
